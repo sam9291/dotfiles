@@ -20,3 +20,16 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >
 ```
 
 _Note: You may need to update this script for the alias if you are using zsh_
+
+## Plugin config instructions
+
+### tmux plugin manager
+
+To get the configuration working for tmux, follow these steps:
+
+1. Clone the tmux plugin manager repo
+```shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+2. Open a tmux session, then use `<C-a>I` to trigger the tmux plugin install
