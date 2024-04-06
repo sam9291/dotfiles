@@ -4,11 +4,12 @@ This repository contains all of my common dotfiles configuration used used for m
 
 There is a special way to clone this repository in your $HOME folder using aliases to store the .git folder in the `~/dotfiles/` path described in the `Install` section.
 
+Following this you can use the `config` alias as a git command for your dotfiles status and commit to this repo.
+
 ## Install
 
 Clone this repository into your `~` folder using the following steps
 
-```
 >echo "dotfiles" >> .gitignore
 >git clone https://github.com/sam9291/dotfiles $HOME/dotfiles
 >alias config='/usr/bin/git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
@@ -18,5 +19,3 @@ Clone this repository into your `~` folder using the following steps
 >alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 >echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.zsh/aliases
 >config config --local status.showUntrackedFiles no
-
-```
