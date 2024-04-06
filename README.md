@@ -10,12 +10,14 @@ Following this you can use the `config` alias as a git command for your dotfiles
 
 Clone this repository into your `~` folder using the following steps
 
->echo "dotfiles" >> .gitignore
->git clone https://github.com/sam9291/dotfiles $HOME/dotfiles
->alias config='/usr/bin/git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
->config config --local status.showUntrackedFiles no
->config checkout
->git init --bare $HOME/dotfiles
->alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
->echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.zsh/aliases
->config config --local status.showUntrackedFiles no
+```shell
+echo "dotfiles" >> .gitignore
+git clone https://github.com/sam9291/dotfiles $HOME/dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
+config checkout
+git init --bare $HOME/dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.zsh/aliases
+config config --local status.showUntrackedFiles no
+```
