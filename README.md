@@ -18,6 +18,8 @@ config config --local status.showUntrackedFiles no
 config checkout
 git init --bare $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.zsh/aliases
+echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.profile
 config config --local status.showUntrackedFiles no
 ```
+
+_Note: You may need to update this script for the alias if you are using zsh_
