@@ -27,6 +27,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 PATH="$PATH:/opt/nvim-linux64/bin"
-alias config='/usr/bin/git --git-dir=/home/sampoi/dotfiles/ --work-tree=/home/sampoi'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME/'
 alias v='nvim'
 alias t='tmux'
