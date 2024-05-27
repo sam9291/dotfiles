@@ -270,3 +270,6 @@ dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, int
 dotnet_naming_symbols.private_or_internal_field.applicable_kinds = field
 dotnet_naming_symbols.private_or_internal_field.applicable_accessibilities = internal, private, private_protected
 # dotnet_naming_symbols.private_or_internal_field.required_modifiers =
+
+[*.{cs,vb}]
+dotnet_diagnostic.CS8652.severity = none

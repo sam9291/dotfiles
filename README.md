@@ -11,16 +11,26 @@ Following this you can use the `config` alias as a git command for your dotfiles
 Clone this repository into your `~` folder using the following steps
 
 ```shell
-echo "dotfiles" >> .gitignore
-git clone --bare git@github.com:sam9291/dotfiles.git $HOME/dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-config checkout
+echo "dotfiles" >> .gitignore && \
+git clone --bare git@github.com:sam9291/dotfiles.git $HOME/dotfiles && \
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME' && \
+config config --local status.showUntrackedFiles no && \
+config checkout && \
 echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.profile
 ```
 
 _Note: You may need to update this script for the alias if you are using zsh_
 
+Or if you are setting this up as a readonly clone of this config:
+
+```shell
+echo "dotfiles" >> .gitignore && \
+git clone --bare https://github.com/sam9291/dotfiles.git $HOME/dotfiles && \
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME' && \
+config config --local status.showUntrackedFiles no && \
+config checkout && \
+echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> $HOME/.profile
+```
 ## Plugin config instructions
 
 ### tmux plugin manager
