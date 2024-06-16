@@ -1,6 +1,21 @@
 # Getting Started
 Install C Compiler (needed for nvim-treesitter)
 
+Setup dependencies:
+- fzf
+- ripgrep
+- fd
+
+## Using pacman:
+
+Using pacman, here are all of the necessary packages for a quick setup with all dependencies required:
+
+```bash
+sudo pacman -S dotnet-sdk aspnet-runtime fzf fd ripgrep azure-cli neovim nodejs-lts-iron
+```
+
+Then open neovim and let `:Lazy` package manager and `:Mason` install all automatic plugins
+
 ## On Ubuntu:
 ```
 sudo apt install build-essential
@@ -11,14 +26,10 @@ Install the following dependencies:
 - Typescript latest
 - Dotnet core latest
 
-Clone this repo to the following location:
-```
-~/.config/nvim
-```
 
 Install Neovim following the [official instructions](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 
-Add neovim to your profile path to allow opening it with `nvim`
+Make sure you have neovim to your profile path to allow opening it with `nvim`
 ```
 PATH="$PATH:/opt/nvim-linux64/bin"
 ```
