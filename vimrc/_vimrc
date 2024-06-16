@@ -1,0 +1,32 @@
+" Remap leader to space
+:map <Space> <leader>
+
+set relativenumber
+
+" Navigation
+
+nmap <S-h> :bprevious<cr>
+nmap <S-l> :bnext<cr>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nmap <leader>v :vsplit<cr>
+nmap <leader>s :split<cr>
+
+nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>x :x!<cr>
+
+nmap <C-Up> <C-W>-<C-W>-
+nmap <C-Down> <C-W>+<C-W>+
+nmap <C-Right> <C-W><<C-W><
+nmap <C-Left> <C-W>><C-W>>
+
+vmap ie vgg0vG$
+vmap > >gv
+vmap < <gv
+
+imap jj <Esc>
