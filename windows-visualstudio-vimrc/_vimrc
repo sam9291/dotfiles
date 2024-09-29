@@ -1,0 +1,57 @@
+" Remap leader to space
+:map <Space> <leader>
+
+set relativenumber
+
+" Navigation
+
+nmap <S-h> :bprevious<cr>
+nmap <S-l> :bnext<cr>
+
+nmap <leader>v :vsplit<cr>
+nmap <leader>s :split<cr>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>x :x!<cr>
+
+nmap <leader>ff :vsc Edit.GoToFile<cr>
+nmap <leader>fs :vsc Edit.GoToText<cr>
+nmap <leader>ft :vsc Edit.GoToType<cr>
+nmap <leader>r :vsc Refactor.Rename<cr>
+nmap <leader>fo :vsc Edit.GoToMember<cr>
+nmap <leader>m :vsc Edit.InsertNextMatchingCaret<cr>
+nmap <g><u> :vsc Edit.FindAllReferences<cr>
+nmap <g><i> :vsc Edit.GoToImplementation<cr>
+nmap <leader>fm :vsc Edit.FormatDocument<cr>
+nmap <leader>tr :vsc TestExplorer.RunAllTestsInContext<cr>
+nmap <leader>td :vsc TestExplorer.DebugAllTestsInContext<cr>
+nmap <leader>ts :vsc TestExplorer.ShowTestExplorer<cr>
+nmap <leader>ta :vsc TestExplorer.RunAllTests<cr>
+nmap K :vsc Edit.QuickInfo<cr>
+nmap gcc :vsc Edit.ToggleLineComment<cr>
+nmap <C-f> :vsc SolutionExplorer.SyncWithActiveDocument<cr>
+nmap <C-o> :vsc View.NavigateBackward<cr>
+nmap <C-i> :vsc View.NavigateForward<cr>
+nmap <leader>xx :vsc View.ErrorList<cr>
+
+nmap <C-Up> <C-W>-<C-W>-
+nmap <C-Down> <C-W>+<C-W>+
+nmap <C-Right> <C-W><<C-W><
+nmap <C-Left> <C-W>><C-W>>
+
+vmap <J> :vsc Edit.MoveSelectedLinesDown<cr>
+vmap <K> :vsc Edit.MoveSelectedLinesUp<cr>
+vmap <Y> :vsc Edit.Copy<cr>
+vmap gc :vsc Edit.ToggleLineComment<cr>
+vmap <leader>fm :vsc Edit.FormatSelection<cr>
+vmap ie vgg0vG$
+vmap > >gv
+vmap < <gv
+
+imap jj <Esc>
