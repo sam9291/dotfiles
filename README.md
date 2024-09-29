@@ -11,7 +11,7 @@ Once the repository is cloned in `~/dotfiles`
 Use the `stow` command with the `application Id` you want to install:
 
 ```shell
-stow nvim && stow profile && stow tmux && stow editorconfig && stow vimrc
+stow nvim && stow profile && stow tmux && stow editorconfig && stow vimrc && stow vscode
 ```
 
 ## Plugin config instructions
