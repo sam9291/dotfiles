@@ -1,21 +1,18 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
 -- Basic settings
-vim.o.number = true         -- Enable line numbers
+vim.o.number = true -- Enable line numbers
 vim.o.relativenumber = true -- Enable relative line numbers
-vim.o.tabstop = 2           -- Number of spaces a tab represents
-vim.o.shiftwidth = 2        -- Number of spaces for each indentation
-vim.o.expandtab = true      -- Convert tabs to spaces
-vim.o.smartindent = true    -- Automatically indent new lines
-vim.o.wrap = false          -- Disable line wrapping
-vim.o.termguicolors = true  -- Enable 24-bit RGB colors
+vim.o.tabstop = 2 -- Number of spaces a tab represents
+vim.o.shiftwidth = 2 -- Number of spaces for each indentation
+vim.o.expandtab = true -- Convert tabs to spaces
+vim.o.smartindent = true -- Automatically indent new lines
+vim.o.wrap = false -- Disable line wrapping
 vim.o.autoindent = true
-vim.o.background = "dark"
 vim.o.swapfile = false
 
--- Core keymap
--- Syntax highlighting and filetype plugins
-vim.cmd("syntax enable")
-vim.cmd("filetype plugin indent on")
-vim.cmd("colorscheme default")
 vim.g.mapleader = " " -- Space as the leader key
 local map = vim.api.nvim_set_keymap
 
@@ -43,3 +40,6 @@ map("n", "<C-Right>", "<C-W><<C-W><", { noremap = true, silent = true, desc = "R
 map("n", "<C-Left>", "<C-W>><C-W>>", { noremap = true, silent = true, desc = "Resize buffer Left" })
 
 map("i", "jj", "<Esc>", { noremap = true, silent = true, desc = "Escape insert mode" })
+
+map("n", "<tab>", "<cmd>bnext<cr>", { noremap = true, silent = true, desc = "Next Buffer" })
+map("n", "<s-tab>", "<cmd>bprevious<cr>", { noremap = true, silent = true, desc = "Previous Buffer" })
