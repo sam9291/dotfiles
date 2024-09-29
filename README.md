@@ -27,3 +27,16 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 2. Open a tmux session, then use `<C-a>I` to trigger the tmux plugin install
+
+### lazygit installation
+
+My Neovim config uses lazygit as it's default git tool. To insall, make sure you update your arch packages using:
+
+```bash
+sudo pacman -Sy
+```
+
+Then install lazygit:
+```bash
+sudo pacman -S lazygit
+```
