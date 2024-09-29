@@ -45,3 +45,33 @@ map("n", "<tab>", "<cmd>bnext<cr>", { noremap = true, silent = true, desc = "Nex
 map("n", "<s-tab>", "<cmd>bprevious<cr>", { noremap = true, silent = true, desc = "Previous Buffer" })
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+
+-- LSP Keymaps
+
+local opts = { noremap = true, silent = true }
+opts.desc = "Show LSP references"
+map("n", "gu", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+map("n", "<Leader>fo", "<cmd>Telescope lsp_document_symbols<CR>", opts) -- show definition, references
+
+opts.desc = "Show LSP definitions"
+map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+
+opts.desc = "Show LSP implementations"
+map("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+
+opts.desc = "Show LSP type definitions"
+map("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+
+opts.desc = "See available code actions"
+
+opts.desc = "Show buffer diagnostics"
+map("n", "<C-m>", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+
+opts.desc = "Restart LSP"
+map("n", "<leader>R", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+opts.desc = "Go to declaration"
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+
+opts.desc = "Smart rename"
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts) -- smart rename
