@@ -1,3 +1,8 @@
+# 💤 LazyVim
+
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+
 # Getting Started
 Install C Compiler (needed for nvim-treesitter)
 
@@ -49,6 +54,3 @@ After opening for the first time we need to build the libfzf.dll.
 Using powershell, navigate to `~/AppData/Local/nvim-data/lazy/telescope-fzf-native.nvim/` and run `make`.
 
 You're all set! You can run this config of neovim on windows. (Note: it runs a bit faster on linux)
-
-## Result:
-![Result](./res/result.png)
