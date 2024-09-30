@@ -128,12 +128,12 @@
   {
     "command": "workbench.action.nextEditorInGroup",
     "key": "tab",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus)"
   },
   {
     "command": "workbench.action.previousEditorInGroup",
     "key": "shift-tab",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus)"
   },
   {
     "command": "explorer.newFile",
