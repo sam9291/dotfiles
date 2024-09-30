@@ -228,6 +228,26 @@
     "key": "space r r",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
+  {
+    "command": "testing.runAll",
+    "key": "space t a",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "testing.runAtCursor",
+    "key": "space t r",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "testing.debugAtCursor",
+    "key": "space t d",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "workbench.view.testing.focus",
+    "key": "space t s",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
   // EXTRA
   {
     "command": "workbench.action.toggleZenMode",
@@ -238,3 +258,4 @@
     "command": "editor.emmet.action.matchTag"
   }
 ]
+
