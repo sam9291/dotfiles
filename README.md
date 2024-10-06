@@ -40,3 +40,13 @@ Then install lazygit:
 ```bash
 sudo pacman -S lazygit
 ```
+
+## Install Nerdfont for nvim
+
+```bash
+mkdir -p ~/.fonts
+curl -L https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip --output ~/Downloads/JetBrainsMono.zip
+unzip ~/Downloads/JetBrainsMono.zip ~/.fonts
+fc-cache -f -v
+```
+
