@@ -45,7 +45,7 @@ sudo pacman -S lazygit
 
 ```bash
 mkdir -p ~/.fonts
-curl -L https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip --output ~/Downloads/JetBrainsMono.zip
+curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip --output ~/Downloads/JetBrainsMono.zip
 unzip ~/Downloads/JetBrainsMono.zip -d ~/.fonts
 fc-cache -f -v
 ```
