@@ -26,14 +26,6 @@ if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
 
-PATH="$PATH:/opt/nvim-linux64/bin"
-alias v='nvim'
-alias t='tmux'
-
-if [ -f "/usr/share/fzf/key-bindings.bash" ]; then
-  source /usr/share/fzf/key-bindings.bash
-fi
-
-if [ -f "/usr/share/fzf/completion.bash" ]; then
-  source /usr/share/fzf/completion.bash
+if [ -d "/opt/nvim-linux64/bin" ]; then
+  PATH="$PATH:/opt/nvim-linux64/bin"
 fi
