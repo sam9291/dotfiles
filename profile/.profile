@@ -29,3 +29,7 @@ fi
 if [ -d "/opt/nvim-linux64/bin" ]; then
   PATH="$PATH:/opt/nvim-linux64/bin"
 fi
+
+if [ -d "$HOME/.dotnet/tools" ]; then
+  PATH="$HOME/.dotnet/tools:$PATH"
+fi
