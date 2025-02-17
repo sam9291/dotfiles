@@ -14,6 +14,8 @@ export PATH=/usr/share/dotnet/tools:$PATH
 export PATH=/usr/share/dotnet/:$PATH
 export DPRINT_INSTALL="/home/sampoi/.dprint"
 export PATH="$DPRINT_INSTALL/bin:$PATH"
+export PATH="/opt/Archi/:$PATH"
+export DOTNET_USE_POLLING_FILE_WATCHER=1
 
 alias v='nvim'
 alias t='tmux'
@@ -27,5 +29,8 @@ if [ -f "/usr/share/fzf/completion.bash" ]; then
 fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Set default vagrant provider virtual box
+export VAGRANT_DEFAULT_PROVIDER=virtualbox

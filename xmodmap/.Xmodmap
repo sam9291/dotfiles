@@ -1,0 +1,16 @@
+! add Mode_switch Alt_L
+keycode 64 =
+keycode 64 = Mode_switch
+! keycode 66 = Mode_switch
+
+! Clear before remapping
+keycode 43 =
+keycode 44 =
+keycode 45 =
+keycode 46 =
+
+! Configuration (first column normal type, second with shift and second with Mod_switch)
+keycode 43 = h H Left
+keycode 44 = j J Down
+keycode 45 = k K Up
+keycode 46 = l L Right
