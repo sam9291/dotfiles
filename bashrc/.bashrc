@@ -10,12 +10,13 @@ alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-export PATH=/usr/share/dotnet/tools:$PATH
-export PATH=/usr/share/dotnet/:$PATH
+export PATH=$HOME/.dotnet/tools:$PATH
+export PATH=$HOME/.dotnet/:$PATH
 export DPRINT_INSTALL="/home/sampoi/.dprint"
 export PATH="$DPRINT_INSTALL/bin:$PATH"
 export PATH="/opt/Archi/:$PATH"
 export DOTNET_USE_POLLING_FILE_WATCHER=1
+export DOTNET_ROOT=$HOME/.dotnet/
 
 alias v='nvim'
 alias t='tmux'

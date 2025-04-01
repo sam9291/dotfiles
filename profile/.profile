@@ -32,6 +32,10 @@ if [ -d "/opt/nvim-linux64/bin" ]; then
   PATH="$PATH:/opt/nvim-linux64/bin"
 fi
 
+if [ -d "$HOME/.dotnet" ]; then
+  PATH="$HOME/.dotnet:$PATH"
+fi
+
 if [ -d "$HOME/.dotnet/tools" ]; then
   PATH="$HOME/.dotnet/tools:$PATH"
 fi
@@ -46,3 +50,4 @@ fi
 
 # Set default editor used by superfile (spf)
 export EDITOR=code
+export SAM_CLI_TELEMETRY=0
