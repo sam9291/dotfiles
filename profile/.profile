@@ -51,3 +51,4 @@ fi
 # Set default editor used by superfile (spf)
 export EDITOR=code
 export SAM_CLI_TELEMETRY=0
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
