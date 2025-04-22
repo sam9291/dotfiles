@@ -20,6 +20,8 @@ export DOTNET_ROOT=$HOME/.dotnet/
 
 alias v='nvim'
 alias t='tmux'
+alias k='kubectl'
+alias g='git'
 
 if [ -f "/usr/share/fzf/key-bindings.bash" ]; then
   source /usr/share/fzf/key-bindings.bash
