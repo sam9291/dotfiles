@@ -20,6 +20,7 @@ set $term ghostty
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu rofi -combi-modi "window,drun,ssh" -show combi
+set $browser microsoft-edge
 
 include /etc/sway/config-vars.d/*
 
@@ -74,6 +75,8 @@ output * bg ~/Pictures/Wallpapers/BSL.jpg fill
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym Ctrl+Shift+Space exec $menu
+
+    bindsym $mod+i exec $browser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
