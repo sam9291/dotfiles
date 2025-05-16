@@ -21,7 +21,9 @@ set $term ghostty
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu rofi -combi-modi "window,drun,ssh" -show combi
 set $browser microsoft-edge
-set $screenshot XDG_SESSION_TYPE=wayland flameshot gui
+# set $screenshot XDG_SESSION_TYPE=wayland flameshot gui
+set $screenshot T_QPA_PLATFORM=wayland-egl XDG_SESSION_TYPE=wayland flameshot gui
+set $lockscreen swaylock --image ~/Pictures/Wallpapers/BSL.jpg
 
 include /etc/sway/config-vars.d/*
 
@@ -96,6 +98,7 @@ input "type:keyboard" {
 
     bindsym $mod+i exec $browser
     bindsym Print exec $screenshot
+    bindsym $mod+Ctrl+l exec $lockscreen
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -230,7 +233,6 @@ bar {
   swaybar_command waybar
 }
 
-exec waybar
 # bar {
 #     position top
 
