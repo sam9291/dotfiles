@@ -22,7 +22,8 @@ set $term ghostty
 set $menu rofi -combi-modi "window,drun,ssh" -show combi
 set $browser microsoft-edge
 # set $screenshot XDG_SESSION_TYPE=wayland flameshot gui
-set $screenshot T_QPA_PLATFORM=wayland-egl XDG_SESSION_TYPE=wayland flameshot gui
+# set $screenshot T_QPA_PLATFORM=wayland-egl XDG_SESSION_TYPE=wayland flameshot gui
+set $screenshot grimshot copy area
 set $lockscreen swaylock --image ~/Pictures/Wallpapers/BSL.jpg
 
 include /etc/sway/config-vars.d/*
