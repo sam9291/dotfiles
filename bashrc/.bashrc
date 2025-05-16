@@ -37,3 +37,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Set default vagrant provider virtual box
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+
+[[ -s "/home/sampoi/.gvm/scripts/gvm" ]] && source "/home/sampoi/.gvm/scripts/gvm"

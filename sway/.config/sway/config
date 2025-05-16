@@ -21,6 +21,7 @@ set $term ghostty
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu rofi -combi-modi "window,drun,ssh" -show combi
 set $browser microsoft-edge
+set $screenshot XDG_SESSION_TYPE=wayland flameshot gui
 
 include /etc/sway/config-vars.d/*
 
@@ -28,6 +29,11 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/Pictures/Wallpapers/BSL.jpg fill
+default_border none
+default_floating_border none
+titlebar_padding 1
+titlebar_border_thickness 0
+
 #
 # Example configuration:
 #
@@ -62,6 +68,18 @@ output * bg ~/Pictures/Wallpapers/BSL.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input "1267:12572:VEN_04F3:00_04F3:311C_Touchpad" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
+input "type:keyboard" {
+    xkb_layout us,ca
+    xkb_options grp:alt_shift_toggle
+}
+
 ### Key bindings
 #
 # Basics:
@@ -77,6 +95,7 @@ output * bg ~/Pictures/Wallpapers/BSL.jpg fill
     bindsym Ctrl+Shift+Space exec $menu
 
     bindsym $mod+i exec $browser
+    bindsym Print exec $screenshot
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -208,15 +227,32 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+  swaybar_command waybar
 }
+
+exec waybar
+# bar {
+#     position top
+
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
+
+# Bind App to workspace
+# Check class by : xprop
+# swaymsg -t get_tree
+# assign [class="Google-chrome"] $ws2
+# assign [class="KeePass2"] $ws3
+# assign [class="Pcmanfm"] $ws4
+# assign [class="Firefox"] $ws6
+# assign [class="Remmina"] $ws3
+# assign [class="Skype"] $ws7
+
+include /etc/sway/config.d/*
