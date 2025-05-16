@@ -9,7 +9,7 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["pulseaudio#output", "pulseaudio#input", "network", "cpu", "memory", "temperature", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // "modules-right": [],
     // Modules configuration
     // "sway/workspaces": {
@@ -153,6 +153,34 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "pulseaudio#input": {
+      "format-source": " {volume}%",
+      "format-source-muted": " off",
+      "format": "{format_source}",
+      "scroll-step": 1,
+      "smooth-scrolling-threshold": 1,
+      "max-volume": 100,
+      "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+      "on-click-middle": "pavucontrol",
+      "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+      "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+    },
+    "pulseaudio#output": {
+      "format": "{icon} {volume}%",
+      "format-muted": " off",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "max-volume": 100,
+      "scroll-step": 2,
+      "smooth-scrolling-threshold": 1,
+      "on-click": "pavucontrol",
+      "on-click-middle": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {}",
