@@ -1,6 +1,8 @@
 * {
     /* JetBrainsMono can be downloaded and installed from nerdfonts website and is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    /* VSCode default font*/
+    /* 'Droid Sans Mono', 'monospace', monospace */
     font-size: 13px;
 }
 
