@@ -24,15 +24,7 @@ set $term ghostty
 set $menu "rofi -show combi -modes combi -combi-modes 'window,drun,run'"
 set $browser microsoft-edge
 set $screenshot flameshot gui
-# set $screenshot T_QPA_PLATFORM=wayland-egl XDG_SESSION_TYPE=wayland flameshot gui
-# set $screenshot grimshot copy area
-set $lockscreen swaylock --image ~/Pictures/Wallpapers/BSL.jpg
-
-# output * bg ~/Pictures/Wallpapers/BSL.jpg fill
-# default_border none
-# default_floating_border none
-# titlebar_padding 1
-# titlebar_border_thickness 0
+set $lockscreen i3lock -i /home/sampoi/Pictures/Wallpapers/BSL.png
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -212,3 +204,5 @@ bar {
     status_command i3status
     position top
 }
+
+exec_always "feh --bg-fill /home/sampoi/Pictures/Wallpapers/BSL.jpg"
