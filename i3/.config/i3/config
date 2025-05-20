@@ -66,12 +66,7 @@ floating_modifier $mod
 #     middle_emulation enabled
 # }
 
-# input "type:keyboard" {
-#     xkb_layout us,ca
-#     xkb_options grp:alt_shift_toggle
-# }
 
-exec_always "setxkbmap -layout 'us,ca' -option 'grp:alt_shift_toggle'"
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
