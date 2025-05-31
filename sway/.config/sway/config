@@ -271,6 +271,7 @@ include /etc/sway/config.d/*
 
 # Notification Daemon
 exec swaync
+exec nm-applet
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
