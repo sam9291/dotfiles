@@ -278,7 +278,11 @@ exec nm-applet
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
+# This is essential to fix flameshot screenshots with multi-screen enabled
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
-# exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-# exec hash dbus-update-activation-environment 2>/dev/null && \
-#      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# This is essential to fix screen sharing on wayland with sway (using WebRTC sharing).
+# For this to work, make sure you have installed and running the following: xdg-desktop-portal, xdg-desktop-portal-gtk and xdg-desktop-portal-wlr
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
