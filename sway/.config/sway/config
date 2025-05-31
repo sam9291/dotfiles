@@ -19,7 +19,8 @@ set $term ghostty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $menu "rofi -show combi -modes combi -combi-modes 'window,drun,run'"
+# set $menu "rofi -show combi -modes combi -combi-modes 'window,drun,run'"
+set $menu "wofi --show drun"
 set $browser microsoft-edge
 # set $screenshot XDG_SESSION_TYPE=wayland flameshot gui
 # set $screenshot T_QPA_PLATFORM=wayland-egl XDG_SESSION_TYPE=wayland flameshot gui

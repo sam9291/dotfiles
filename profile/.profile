@@ -56,3 +56,5 @@ export DOTNET_ICU_VERSION_OVERRIDE=74.2-1ubuntu3.1
 export CLR_ICU_VERSION_OVERRIDE=$DOTNET_ICU_VERSION_OVERRIDE
 
 setxkbmap -layout 'us,ca' -option 'grp:alt_shift_toggle'
+
+export -n SESSION_MANAGER
