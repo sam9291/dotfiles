@@ -22,9 +22,11 @@ set $term alacritty
 # set $menu "rofi -show combi -modes combi -combi-modes 'window,drun,run'"
 set $menu "wofi --show drun"
 set $browser microsoft-edge
-# set $screenshot XDG_SESSION_TYPE=wayland flameshot gui
+# set $screenshot "XDG_SESSION_TYPE=wayland flameshot gui"
+# set $screenshot "QT_QPA_PLATFORM=xcb flameshot gui"
+set $screenshot "flameshot gui"
 # set $screenshot T_QPA_PLATFORM=wayland-egl XDG_SESSION_TYPE=wayland flameshot gui
-set $screenshot grimshot copy area
+# set $screenshot grimshot copy area
 set $lockscreen swaylock --image ~/Pictures/Wallpapers/BSL.jpg
 
 include /etc/sway/config-vars.d/*
@@ -276,7 +278,7 @@ exec nm-applet
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
-# for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
+for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
 # exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # exec hash dbus-update-activation-environment 2>/dev/null && \
 #      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
