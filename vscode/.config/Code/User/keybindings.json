@@ -274,38 +274,13 @@
   },
   {
     "key": "ctrl+n",
-    "command": "workbench.action.quickOpenNavigateNext",
-    "when": "inQuickOpen"
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "!editorFocus"
   },
   {
     "key": "ctrl+p",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "showNextParameterHint",
-    "when": "editorTextFocus && parameterHintsVisible"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "showPrevParameterHint",
-    "when": "editorTextFocus && parameterHintsVisible"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "selectNextQuickFix",
-    "when": "editorFocus && quickFixWidgetVisible"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetVisible"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetVisible"
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "!editorFocus"
   }
 ]
 
